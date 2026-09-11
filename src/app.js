@@ -17,6 +17,9 @@ const transactionRouter= require("./routes/transaction.routes")
 /**
  * -Use routes
  */
+app.get("/",(req,res)=>{
+    res.send("Welcome to the backend ledger application")
+})
 app.use("/api/auth",authRouter);
 app.use("/api/accounts",accountRouter);
 app.use("/api/transactions",transactionRouter);
